@@ -8,11 +8,11 @@ const ComponentToPrint = React.forwardRef(
         <p>Preped on:</p>
         {currentDate}
 
-        <p>Expires on:</p>
+        <p>Out on:</p>
         {newDate}
       </div>
     );
   }
 );
-
+ComponentToPrint.displayName = "ComponentToPrint";
 export default ComponentToPrint;

@@ -35,7 +35,7 @@ const DisplayLabelCard = ({ name, hold, unique }) => {
         </p>
 
         <p className='pt-3'>
-          Expires on:
+          Out on:
           <br />
           {newdate}
         </p>
