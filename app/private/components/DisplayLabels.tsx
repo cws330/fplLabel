@@ -14,7 +14,7 @@ const DisplayLabels = async () => {
       <DisplayLabelCard
         name={label.name}
         hold={label.shelflife!}
-        unique={label.id}
+        key={label.id}
       />
     );
   });
