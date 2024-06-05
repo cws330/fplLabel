@@ -13,8 +13,8 @@ const DisplayLabels = async () => {
     return (
       <DisplayLabelCard
         name={label.name}
-        hold={label.shelflife}
-        key={label.id}
+        hold={label.shelflife!}
+        unique={label.id}
       />
     );
   });

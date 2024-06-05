@@ -13,7 +13,7 @@ import PrintButton from "./PrintButton";
 type labelCard = {
   name: string;
   hold: number;
-  unique: string;
+  unique: number;
 };
 
 const DisplayLabelCard: React.FC<labelCard> = ({ name, hold, unique }) => {
@@ -28,7 +28,7 @@ const DisplayLabelCard: React.FC<labelCard> = ({ name, hold, unique }) => {
     newdate = dt.toLocaleDateString();
   }
   return (
-    <Card className='min-w-[250px]'>
+    <Card className='min-w-[250px] mt-3'>
       <CardHeader>
         <CardTitle>{name}</CardTitle>
         <CardDescription>Today Plus {hold}</CardDescription>

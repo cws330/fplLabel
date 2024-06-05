@@ -8,7 +8,7 @@ type printType = {
   name: string;
   currentDate: string;
   newDate: string;
-  id: string;
+  id: number;
 };
 
 const PrintButton: React.FC<printType> = ({
