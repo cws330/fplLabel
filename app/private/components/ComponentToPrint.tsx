@@ -1,6 +1,12 @@
 import React from "react";
 
-const ComponentToPrint = React.forwardRef(
+type printComponent = {
+  name: string;
+  currentDate: string;
+  newDate: string;
+};
+
+const ComponentToPrint: React.FC<printComponent> = React.forwardRef(
   ({ name, currentDate, newDate }, ref) => {
     return (
       <div ref={ref} className='p-0 m-0 max-w-[50mm] max-h-[50mm] text-sm '>

@@ -10,7 +10,13 @@ import {
 import { Button } from "@/components/ui/button";
 import PrintButton from "./PrintButton";
 
-const DisplayLabelCard = ({ name, hold, unique }) => {
+type labelCard = {
+  name: string;
+  hold: number;
+  unique: string;
+};
+
+const DisplayLabelCard: React.FC<labelCard> = ({ name, hold, unique }) => {
   let dt = new Date();
   dt.setDate(dt.getDate() + hold);
   let currentDate = Date.now();
