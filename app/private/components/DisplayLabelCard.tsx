@@ -13,7 +13,7 @@ import PrintButton from "./PrintButton";
 type labelCard = {
   name: string;
   hold: number;
-  key: number;
+  unique: number;
 };
 
 const DisplayLabelCard: React.FC<labelCard> = ({ name, hold, unique }) => {

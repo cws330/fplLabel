@@ -1,6 +1,7 @@
 import { createClient } from "@/utils/supabase/server";
 import React from "react";
 import DisplayLabelCard from "./DisplayLabelCard";
+import { SearchBar } from "./SearchBar";
 
 const DisplayLabels = async () => {
   const supabase = createClient();
@@ -8,16 +9,7 @@ const DisplayLabels = async () => {
     .from("labels")
     .select("*")
     .order("name", { ascending: true });
-  if (error) return;
-  return data.map((label) => {
-    return (
-      <DisplayLabelCard
-        name={label.name}
-        hold={label.shelflife!}
-        key={label.id}
-      />
-    );
-  });
+  if (!error) return <SearchBar labels={data} />;
 };
 
 export default DisplayLabels;

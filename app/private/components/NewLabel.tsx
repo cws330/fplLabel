@@ -8,11 +8,14 @@ import {
 } from "@/components/ui/dialog";
 import { buttonVariants } from "@/components/ui/button";
 import { NewLabelForm } from "./NewLabelForm";
+import { cn } from "@/lib/utils";
 
 const NewLabel = () => {
   return (
     <Dialog>
-      <DialogTrigger className={buttonVariants({ variant: "outline" })}>
+      <DialogTrigger
+        className={cn(buttonVariants({ variant: "outline" }), "m-2")}
+      >
         New Label
       </DialogTrigger>
       <DialogContent>

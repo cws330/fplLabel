@@ -17,7 +17,7 @@ const PrintButton: React.FC<printType> = ({
   newDate,
   id,
 }) => {
-  const componentRef = useRef();
+  const componentRef = useRef<HTMLDivElement>();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
     pageStyle: "@page {size: 100mm 150mm; margin:0;}",

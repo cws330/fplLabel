@@ -6,16 +6,17 @@ type printComponent = {
   newDate: string;
 };
 
-const ComponentToPrint: React.FC<printComponent> = React.forwardRef(
-  ({ name, currentDate, newDate }, ref) => {
+const ComponentToPrint = React.forwardRef<HTMLDivElement, printComponent>(
+  ({ name, currentDate, newDate }: printComponent, ref) => {
     return (
-      <div ref={ref} className='p-0 m-0 max-w-[50mm] max-h-[50mm] text-sm '>
-        <p className='text-lg'> {name}</p>
+      <div ref={ref} className='w-[100%] h-[100%] p-2 text-sm '>
+        <p className='text-lg text-center'> {name}</p>
+        <br />
         <p>Preped on:</p>
-        {currentDate}
-
+        <p className='text-center'>{currentDate}</p>
+        <br />
         <p>Out on:</p>
-        {newDate}
+        <p className='text-center'>{newDate}</p>
       </div>
     );
   }
